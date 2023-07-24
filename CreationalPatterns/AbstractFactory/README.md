@@ -9,7 +9,9 @@ The Abstract Factory is a creational design pattern that allows the creation of 
 ## The Problem
 
 In a manufacturing ecosystem, you might have families of related products, like Cars, Bikes, and Trucks, and variants of these families (Electric, Gasoline, Hybrid). The challenge is creating individual vehicle objects that match others of the same family, without having to modify existing code when adding new products or families of products.
+
 :heavy_check_mark:
+
 ## The Solution
 
 The Abstract Factory pattern suggests declaring interfaces for each distinct product of the product family (cars, bikes, trucks, etc.). Variants of products adhere to these interfaces. Following that, the Abstract Factory—an interface with a list of creation methods for all products that are part of the product family—is declared.
@@ -26,23 +28,40 @@ The client code works with both factories and products via their respective abst
 
 An application of the Abstract Factory pattern could be the creation of various animal toys in a toy factory. Concrete factories correspond to specific animal types (like aquatic, terrestrial, or avian) and create toy animals that match the category. Upon receiving an order, the toy factory checks the type of the requested animal category and uses this information to create a factory object from a class that matches the animal category. The rest of the code then uses this factory to create toy animals, thus ensuring that the wrong toys are not created.
 
-                        :factory:  ToyAnimalFactory (I)
-                                        |
-                                        |
-                 _____________________________________________
-                /                       |                     \
-               /                        |                      \
-              /                         |                       \
-             /                          |                        \
-   AquaticAnimalFactory        TerrestrialAnimalFactory    AvianAnimalFactory
-             |                          |                          |
-           Shark                       Lion                       Eagle
+classDiagram
+    ToyAnimalFactory <|.. AquaticToyFactory
+    AquaticToyFactory ..> AquaticToy : creates
+    ToyAnimalFactory <|.. TerrestrialToyFactory
+    TerrestrialToyFactory ..> TerrestrialToy : creates
+    ToyAnimalFactory <|.. AvianToyFactory
+    AvianToyFactory ..> AvianToy : creates
+    ToyAnimalFactory : +createToyAnimal()
+    
+    class AquaticToyFactory{
+        +createToyAnimal() : AquaticToy
+    }
+    class TerrestrialToyFactory{
+        +createToyAnimal() : TerrestrialToy
+    }
+    class AvianToyFactory{
+        +createToyAnimal() : AvianToy
+    }
+    class AquaticToy{
+        +float()
+    }
+    class TerrestrialToy{
+        +roar()
+    }
+    class AvianToy{
+        +fly()
+    }
 
 The Abstract Factory design pattern provides an efficient way to create families of related objects, thus enhancing code modularity and making it more flexible and maintainable. For instance, if we decide to introduce a new category of animal toys (e.g., dinosaurs), we can do so without having to modify the existing animal categories, resulting in minimal disruption to the rest of the system.
 
 :bulb:
 ## Applicability
 :rocket:
+
 Use the Abstract Factory Method when you don’t know beforehand the exact types and dependencies of the objects your code should work with.
 
 The Abstract Factory Method separates product construction code from the code that actually uses the product. Therefore it’s easier to extend the product construction code independently from the rest of the code.
@@ -61,3 +80,4 @@ Let’s see how that would work. Imagine that you have a toy factory application
 To achieve this, you create a subclass DinosaurToyFactory from the base factory class and override its create_toy_animal method. While this method returns ToyAnimal objects in the base class, you make your subclass return DinosaurToy objects. Now use the DinosaurToyFactory class instead of the default factories. And that’s about it!
 :dart:
 Use the Abstract Factory Method when you want to save system resources by reusing existing objects instead of rebuilding them each time. You can achieve this by maintaining a pool of created objects inside your factories and reusing them when appropriate.
+
