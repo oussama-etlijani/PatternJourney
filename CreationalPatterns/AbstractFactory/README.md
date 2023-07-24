@@ -38,8 +38,8 @@ The Abstract Factory Method separates product construction code from the code th
 For example, to add a new type of toy animal to the toy factory, you’ll only need to create a new concrete factory subclass (like DinosaurToyFactory) and implement the abstract factory methods in it.
 :rocket:
 Use the Abstract Factory Method when you want to provide users of your library or framework with a way to extend its internal components.
-:brain:
-Inheritance is probably the easiest way to extend the default behavior of a library or framework. But how would the framework recognize that your subclass should be used instead of a standard component?
+
+🧠 Inheritance is probably the easiest way to extend the default behavior of a library or framework. But how would the framework recognize that your subclass should be used instead of a standard component?
 
 The solution is to reduce the code that constructs components across the framework into a set of factory methods and let anyone override these methods in addition to extending the component itself.
 
