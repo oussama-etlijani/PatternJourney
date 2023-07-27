@@ -1,4 +1,4 @@
-# PatternJourney
+# ♟️  PatternJourney
 A comprehensive study and implementation of software design patterns. The aim of this repository is to provide a learning path for developers who want to understand the principles behind popular software design patterns, with practical examples in different programming languages.
 
 ## Description
@@ -9,7 +9,7 @@ This repository covers the following types of Design Patterns:
 2. **Structural Patterns:** These patterns are about organizing different classes and objects to form larger structures and provide new functionality. Examples include the Adapter, Decorator, and Composite patterns.
 3. **Behavioral Patterns:** These patterns are about identifying common communication patterns between objects and realize these patterns. Examples include the Observer, Strategy, and Command patterns.
 
-## Inspiration
+## 🌟 Inspiration
 This project was inspired by the seminal work, "Design Patterns: Elements of Reusable Object-Oriented Software" by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides (aka "The Gang of Four"). Their book is a classic in the field and serves as the foundation for the understanding of software design patterns.
 
 The content and examples in this repository are also inspired and guided by the website [ Refactoring Guru](https://refactoring.guru/), an excellent resource for understanding design patterns and how to use them in different programming languages.
