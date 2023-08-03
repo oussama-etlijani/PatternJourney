@@ -1,5 +1,5 @@
 
-# 🏭 Abstract Factory Design Pattern
+# ⚙️ Abstract Factory Design Pattern
 
 ## Introduction
 
@@ -49,4 +49,4 @@ The solution is to reduce the code that constructs components across the framewo
 To achieve this, you create a subclass DinosaurToyFactory from the base factory class and override its create_toy_animal method. While this method returns ToyAnimal objects in the base class, you make your subclass return DinosaurToy objects. Now use the DinosaurToyFactory class instead of the default factories. And that’s about it!
 
 
-🎯 Use the Abstract Factory Method when you want to save system resources by reusing existing objects instead of rebuilding them each time. You can achieve this by maintaining a pool of created objects inside your factories and reusing them when appropriate.
+🎯 Implement the Abstract Factory pattern when your code needs to interact with different groups of related products, without relying on their specific classes. This is beneficial when these classes may not be predetermined, or when you wish to ensure the possibility for future scalability.
