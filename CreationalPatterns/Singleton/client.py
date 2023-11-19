@@ -10,3 +10,11 @@ if first_instance is second_instance:
 
 # This line would raise an exception
 # another_instance = Singleton()
+import os
+
+directory_path = '/Users/Ouss/PycharmProjects/PatternJourney/BehavioralPattern/ChainOfResponsibility'
+
+if os.path.exists(directory_path):
+    print(f"The directory '{directory_path}' does exist.")
+else:
+    print(f"The directory '{directory_path}' does not exist.")

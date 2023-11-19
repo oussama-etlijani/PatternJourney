@@ -5,10 +5,12 @@ class WeatherInCelsius:
     def get_temperature(self) -> float:
         return 25.0  # returns temperature in Celsius
 
+
 # Third-party library with incompatible interface
 class WeatherInFahrenheit:
     def fetch_temperature(self) -> float:
         return 77.0  # returns temperature in Fahrenheit
+
 
 # Adapter class
 class TemperatureAdapter:
@@ -20,9 +22,11 @@ class TemperatureAdapter:
         temp_celsius = (temp_fahrenheit - 32) * 5/9
         return temp_celsius  # converts Fahrenheit to Celsius
 
+
 # Client code
 def display_temperature(weather_source):
     print(f"The current temperature is {weather_source.get_temperature()}°C.")
+
 
 if __name__ == "__main__":
     # Using the existing interface
