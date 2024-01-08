@@ -6,7 +6,23 @@ Consider a scenario where you are working on a software project that involves in
 
 ## ✔️ The Solution
 This is where the Facade design pattern comes into play. The problem it addresses is the need for a simplified and unified interface to interact with the underlying complexities of various subsystems. By implementing a facade, you create a single entry point that encapsulates the interactions with the subsystems, shielding the rest of the application from their intricacies.
-
+```
++------------------+      +---------------------+       +------------------+
+|      Client      |      |   ComputerFacade   |       |    Subsystem    |
++------------------+      +---------------------+       +------------------+
+         |                         |                               |
+         |                         |                               |
+         +------------------------>|                               |
+         |                         |                               |
+         |                         |                               |
+         |                         |                               |
+         |                         |                               |
+         +---------------------------------------->|   CPU           |
+         |                         |                               |
+         +---------------------------------------->|   Memory        |
+         |                         |                               |
+         +---------------------------------------->|   HardDrive     |
+```
 The Facade pattern helps in promoting a clean and easy-to-understand structure, simplifying the overall system architecture. It not only enhances the maintainability of the codebase but also facilitates future modifications or updates by isolating the impact within the facade. This design pattern proves particularly valuable in scenarios where the underlying components are extensive and diverse, offering a practical solution to the challenges of managing complexity in software development.
 ## 🚧 Structural Elements
 1. **Facade**: The Facade class provides a simplified interface to interact with the underlying subsystems. It encapsulates the interactions with the subsystems, shielding the rest of the application from their intricacies.
