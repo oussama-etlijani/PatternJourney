@@ -28,7 +28,7 @@ Each iterator provides a standard method for fetching documents from the collect
 
 The real power of the Iterator pattern becomes evident when considering the adaptability it offers to the DMS. If a specific traversal method is needed—for example, filtering documents based on metadata or searching for specific keywords—you can simply create a new iterator class tailored to that requirement. This can be achieved without altering the core DMS or affecting the client code.
 ## Example
-# Enhancing Reading Experience with Iterator Design Pattern
+### Enhancing Reading Experience with Iterator Design Pattern
 
 Imagine you are an avid reader with an extensive personal library at home, filled with books of various genres and subjects. You decide to spend your weekend exploring your collection and revisiting some of your favorite literary works.
 
