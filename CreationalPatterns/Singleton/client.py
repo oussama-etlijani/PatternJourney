@@ -1,4 +1,4 @@
-from singleton import Singleton  # Import the Singleton class
+from singleton import Singleton
 
 # Attempt to create instances using the public static method
 first_instance = Singleton.getInstance()
