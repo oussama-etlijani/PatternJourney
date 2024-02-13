@@ -1,5 +1,6 @@
 # Command pattern separates the receiver from the invoker.
 from abc import ABC, abstractmethod
+
 from light import Light
 
 
@@ -9,7 +10,6 @@ class Command(ABC):
     @abstractmethod
     def execute(self) -> None:
         """Execute the command."""
-        pass
 
 
 class LightOnCommand(Command):

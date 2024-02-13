@@ -1,5 +1,5 @@
 from abstract_factory import ToyAnimalFactory
-from concrete_products import Shark, Lion, Eagle
+from concrete_products import Eagle, Lion, Shark
 
 
 class AquaticAnimalFactory(ToyAnimalFactory):

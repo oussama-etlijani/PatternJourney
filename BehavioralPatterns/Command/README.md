@@ -63,8 +63,3 @@ Similar to any other object, a command object can undergo serialization, transfo
 Adopt the Command pattern when the implementation of reversible operations, specifically undo and redo functionalities, is a requirement.
 
 While various approaches exist for implementing undo/redo mechanisms, the Command pattern stands out as one of the most widely used. To enable the reversal of operations, maintaining a history of executed commands becomes crucial. This command history typically takes the form of a stack, preserving executed command objects and associated backups of the application's state.
-
-
-
-
-

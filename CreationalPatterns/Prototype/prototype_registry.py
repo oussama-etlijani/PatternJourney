@@ -1,10 +1,9 @@
-
-
 class PrototypeRegistry:
     """
     Maintains a registry of prototypes for cloning.
     Allows for registering, fetching, and listing prototypes.
     """
+
     _prototypes = {}
 
     @classmethod

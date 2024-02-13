@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from abc import ABC, abstractmethod
 
 
@@ -59,7 +60,9 @@ class GameStateCaretaker:
             return
 
         memento = self._mementos.pop()
-        print(f"Caretaker: Restoring character state - health: {memento.get_health()}, mana: {memento.get_mana()}")
+        print(
+            f"Caretaker: Restoring character state - health: {memento.get_health()}, mana: {memento.get_mana()}"
+        )
         self._game_character.restore_state(memento)
 
     def show_history(self) -> None:

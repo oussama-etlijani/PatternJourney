@@ -1,4 +1,4 @@
-from abstract_products import AquaticAnimal, TerrestrialAnimal, AvianAnimal
+from abstract_products import AquaticAnimal, AvianAnimal, TerrestrialAnimal
 
 
 class Shark(AquaticAnimal):

@@ -1,5 +1,6 @@
+from concrete_handlers import ConsoleLogger, EmailLogger, FileLogger
 from handler_interface import Logger
-from concrete_handlers import ConsoleLogger, FileLogger, EmailLogger
+
 
 def main() -> None:
     # Create the chain of loggers
@@ -14,6 +15,7 @@ def main() -> None:
     console_logger.log_message("This is a debug message.", Logger.DEBUG)
     console_logger.log_message("This is an info message.", Logger.INFO)
     console_logger.log_message("This is an error message.", Logger.ERROR)
+
 
 if __name__ == "__main__":
     main()

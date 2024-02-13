@@ -19,7 +19,7 @@ class TemperatureAdapter:
 
     def get_temperature(self) -> float:
         temp_fahrenheit = self.weather_in_fahrenheit.fetch_temperature()
-        temp_celsius = (temp_fahrenheit - 32) * 5/9
+        temp_celsius = (temp_fahrenheit - 32) * 5 / 9
         return temp_celsius  # converts Fahrenheit to Celsius
 
 

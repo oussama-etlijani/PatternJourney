@@ -12,4 +12,3 @@ class Prototype(ABC):
         """
         Abstract method for cloning an object.
         """
-        pass

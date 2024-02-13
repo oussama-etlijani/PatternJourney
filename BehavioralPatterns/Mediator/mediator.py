@@ -40,7 +40,12 @@ class Customization(BaseComponent):
 
 
 class ShoppingCartMediator(Mediator):
-    def __init__(self, product_item: ProductItem, quantity_input: QuantityInput, customization: Customization) -> None:
+    def __init__(
+        self,
+        product_item: ProductItem,
+        quantity_input: QuantityInput,
+        customization: Customization,
+    ) -> None:
         self._product_item = product_item
         self._product_item.mediator = self
         self._quantity_input = quantity_input
@@ -50,7 +55,9 @@ class ShoppingCartMediator(Mediator):
 
     def notify(self, sender: object, event: str) -> None:
         if event == "CustomizationSelected":
-            print("Mediator reacts to customization selection and triggers the following operations:")
+            print(
+                "Mediator reacts to customization selection and triggers the following operations:"
+            )
             self._quantity_input.update_quantity()
 
 

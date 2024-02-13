@@ -1,11 +1,12 @@
 from abc import ABC, abstractmethod
-from random import choice
+
 
 # Define the Book class representing individual books in the collection
 class Book:
     def __init__(self, title, genre):
         self.title = title
         self.genre = genre
+
 
 # Define the Iterator interface
 class Iterator(ABC):
@@ -16,6 +17,7 @@ class Iterator(ABC):
     @abstractmethod
     def has_next(self):
         pass
+
 
 # Define the ConcreteIterators
 class RandomSelectionIterator(Iterator):
@@ -34,6 +36,7 @@ class RandomSelectionIterator(Iterator):
     def has_next(self):
         return self.current_index + 1 < len(self.books)
 
+
 class AlphabeticalIterator(Iterator):
     def __init__(self, books):
         self.books = sorted(books, key=lambda x: x.title)
@@ -50,6 +53,7 @@ class AlphabeticalIterator(Iterator):
     def has_next(self):
         return self.current_index + 1 < len(self.books)
 
+
 # Define the Bookshelf class
 class Bookshelf:
     def __init__(self, books):
@@ -62,6 +66,7 @@ class Bookshelf:
             return AlphabeticalIterator(self.books)
         else:
             raise ValueError("Invalid iterator type")
+
 
 # Example Usage
 if __name__ == "__main__":

@@ -49,7 +49,11 @@ class ComputerFacade:
         Returns:
             list[str]: A list of messages indicating each step of the startup sequence.
         """
-        result: list[str] = [self.cpu.start(), self.memory.load(), self.hard_drive.read()]
+        result: list[str] = [
+            self.cpu.start(),
+            self.memory.load(),
+            self.hard_drive.read(),
+        ]
         return result
 
 

@@ -6,7 +6,7 @@ The Adapter serves as a structural design pattern that enables collaboration bet
 ## 🚨 The Problem
 Imagine you're building a weather forecasting app that gathers meteorological data from various sources in CSV format to present accurate predictions to the user.
 
-Later on, you decide to enhance the app by incorporating a third-party climate modeling algorithm. However, there's a limitation: this algorithm only accepts data in XML format. 
+Later on, you decide to enhance the app by incorporating a third-party climate modeling algorithm. However, there's a limitation: this algorithm only accepts data in XML format.
 
 You could potentially modify the algorithm to accept CSV data, but this approach poses risks. First, it could disrupt other parts of your code that rely on the algorithm. Second, you may not even have access to the algorithm's source code, making such changes unfeasible.
 ## ✔️ The Solution

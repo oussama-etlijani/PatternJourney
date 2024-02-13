@@ -22,5 +22,3 @@ Contributions are more than welcome! Whether it's refining explanations, fixing 
 
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
-
-

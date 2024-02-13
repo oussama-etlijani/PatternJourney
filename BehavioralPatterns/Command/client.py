@@ -1,6 +1,6 @@
 # Command pattern client code.
+from command import LightOffCommand, LightOnCommand
 from light import Light
-from command import LightOnCommand, LightOffCommand
 from remote_control import RemoteControl
 
 if __name__ == "__main__":

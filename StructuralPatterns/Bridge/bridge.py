@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from abc import ABC, abstractmethod
 
 
@@ -7,6 +8,7 @@ class MusicPlayer:
     The MusicPlayer class acts as the Abstraction in this example. It contains
     a reference to a Device object and delegates the actual audio playback to it.
     """
+
     def __init__(self, device: Device) -> None:
         self.device = device
 
@@ -20,6 +22,7 @@ class AdvancedMusicPlayer(MusicPlayer):
     AdvancedMusicPlayer is an Extended Abstraction that might offer advanced
     features like equalizers. It inherits from the base MusicPlayer class.
     """
+
     def play(self) -> str:
         """Perform advanced play action, for example, with equalizer settings."""
         return f"Playing music with equalizer on {self.device.play_audio()}"
@@ -30,10 +33,10 @@ class Device(ABC):
     The Device class serves as the Implementation interface. It provides a contract
     for concrete device classes to fulfill for actual audio playback.
     """
+
     @abstractmethod
     def play_audio(self) -> str:
         """Abstract method to play audio. To be implemented by concrete classes."""
-        pass
 
 
 class Speaker(Device):
@@ -41,6 +44,7 @@ class Speaker(Device):
     The Speaker class is a Concrete Implementation that fulfills the contract
     defined by the Device interface for speaker-based audio playback.
     """
+
     def play_audio(self) -> str:
         """Implement the play audio functionality for Speaker."""
         return "the Speaker"
@@ -52,6 +56,7 @@ class Headphones(Device):
     contract defined by the Device interface, this time for headphone-based audio
     playback.
     """
+
     def play_audio(self) -> str:
         """Implement the play audio functionality for Headphones."""
         return "the Headphones"

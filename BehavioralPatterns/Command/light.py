@@ -1,5 +1,6 @@
 # Command Receiver
 
+
 class Light:
     """Receiver class representing an electronic light."""
 

@@ -16,7 +16,7 @@ The pattern's popularity has led some to label any class that addresses even one
 Every Singleton implementation generally follows these two essential steps:
 
 1. Restrict the default constructor to private access, which prevents the creation of new instances of the Singleton class using the 'new' operator.
-  
+
 2. Implement a static method that serves as a substitute for the constructor. Internally, this method invokes the private constructor to create a unique instance and stores it in a static field. Any subsequent calls to this static method will return the pre-existing instance.
 
 If your code can access the Singleton class, you can call its static method. Doing so will consistently return the same unique instance.

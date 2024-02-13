@@ -1,11 +1,11 @@
 
-# 🔗 Chain of Responsibility 
+# 🔗 Chain of Responsibility
 
 ## Introduction
 The Chain of Responsibility pattern is a behavioral design pattern that facilitates the passing of requests through a sequence of handlers. When a request is received, each handler determines whether to handle the request or pass it to the next handler in the sequence.
 
 ##  🚨 The Problem
-Imagine you are responsible for the security of a high-tech research facility. You need to implement a series of security checks to control access to various areas within the facility. 
+Imagine you are responsible for the security of a high-tech research facility. You need to implement a series of security checks to control access to various areas within the facility.
 
 Initially, you focus on the entrance to the facility. To gain access, individuals must first provide a valid ID card. If their card is invalid, there's no need to proceed with any other security checks.
 

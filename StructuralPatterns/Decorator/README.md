@@ -56,7 +56,7 @@ This approach extends to various functionalities, such as adding encryption, com
 
 ## 📚🔨 Implementation Guide
 
-1. **Model Representation:** 
+1. **Model Representation:**
 Ensure your app's core model adopts a tree structure. Break it down into simple elements and containers. Remember, containers should be capable of holding both simple elements and other containers.
 2. **Component Interface Declaration:**
 Identify the methods common to both the core component and optional layers. Establish a component interface and declare these methods.
@@ -77,9 +77,3 @@ Utilize the Decorator to organize your business logic into layers, creating a de
 Employ the pattern when extending an object's behavior through inheritance is impractical or impossible.
 
 In instances where a programming language restricts further extension of a class (e.g., using the "final" keyword), the Decorator pattern becomes valuable. In such cases, reusing existing behavior involves wrapping the class with a custom wrapper, applying the principles of the Decorator pattern.
-
-
-
-
-
-

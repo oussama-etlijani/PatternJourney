@@ -25,9 +25,3 @@ Apply the pattern in cases where accessing an object's fields, getters, or sette
 When implementing an "undo" feature, the integration of Command and Memento patterns is beneficial. Commands handle diverse operations on a target object, and concurrently, mementos capture and store the object's state right before a command is executed.
 
 When aiming to capture the current iteration state and facilitate potential rollbacks, consider employing Memento in conjunction with Iterator. Mementos play a role in preserving the state of the iteration, allowing for the restoration of the iteration to a previous state when needed.
-
-
-
-
-
-

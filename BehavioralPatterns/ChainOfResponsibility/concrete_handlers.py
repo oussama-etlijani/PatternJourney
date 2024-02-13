@@ -12,7 +12,7 @@ class FileLogger(Logger):
         self.filename = filename
 
     def write(self, message: str) -> None:
-        with open(self.filename, 'a') as file:
+        with open(self.filename, "a") as file:
             file.write(f"File Logger: {message}\n")
 
 

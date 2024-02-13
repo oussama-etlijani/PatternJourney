@@ -14,7 +14,7 @@ The Prototype pattern entrusts the task of replication to the very objects being
 
 The essence of the clone method remains fairly consistent across different classes. This method forms an object from the present class and transfers all attributes from the original object to the newly formed one. Interestingly, even private attributes can be duplicated, as many programming languages grant objects the privilege to access private attributes of fellow objects within the same class.
 
-Such a cloneable object is termed a "prototype." Especially when your objects have a multitude of attributes and various configurations, cloning can be a preferable alternative to creating subclasses. 
+Such a cloneable object is termed a "prototype." Especially when your objects have a multitude of attributes and various configurations, cloning can be a preferable alternative to creating subclasses.
 In practice, this involves setting up a collection of objects, each configured distinctively. Should you require an object mirroring a pre-existing configuration, you merely replicate the prototype rather than building an entirely new entity.
 ## 🚧 Structural Elements
 - **Prototype**: The Prototype interface sets forth methods for duplication, typically represented by a lone "clone" method.
@@ -24,25 +24,25 @@ In practice, this involves setting up a collection of objects, each configured d
 Implementation Guide:
 
 1. **Setting up the Prototype**: Initiate a prototype interface, incorporating the clone method. If an existing class hierarchy is present, you can add the method to its classes.
-   
-2. **Prototype Class Construction**: 
+
+2. **Prototype Class Construction**:
    - This class should feature an alternate constructor accepting an object of its own class. This constructor is tasked with copying the attributes of the passed object to the new instance.
    - If working with a subclass, invoke the parent constructor to facilitate the superclass in copying its private attributes.
-   
-3. **Method Overloading Considerations**: 
-   - If your programming environment doesn't back method overloading, you'll be restricted from developing a distinct prototype constructor. Consequently, copying data to the new clone will necessitate execution within the clone method. 
+
+3. **Method Overloading Considerations**:
+   - If your programming environment doesn't back method overloading, you'll be restricted from developing a distinct prototype constructor. Consequently, copying data to the new clone will necessitate execution within the clone method.
    - Nonetheless, embedding this logic within a standard constructor is deemed more reliable, ensuring the object, once the new operator is activated, is ready to use.
 
-4. **Cloning Method Essentials**: 
-   - Typically, this method encapsulates a single action: invoking a new operator combined with the prototype-specific constructor. 
+4. **Cloning Method Essentials**:
+   - Typically, this method encapsulates a single action: invoking a new operator combined with the prototype-specific constructor.
    - Each class should independently override the cloning method, pairing the new operator with its unique class name. Neglecting this may result in the generation of a parent class object through the cloning method.
 
-5. **Prototype Registry (Optional)**: 
+5. **Prototype Registry (Optional)**:
    - Consider establishing a centralized registry to catalog prototypes that are frequently utilized.
-   - This registry can be structured as a distinct factory class or integrated within the foundational prototype class, accompanied by a static method for prototype retrieval. 
+   - This registry can be structured as a distinct factory class or integrated within the foundational prototype class, accompanied by a static method for prototype retrieval.
    - When a request is made, based on provided search parameters or a simple string descriptor, the method should locate the relevant prototype, clone it, and dispatch the duplicate to the requester.
 
-6. **Refinement**: 
+6. **Refinement**:
    - Conclude by substituting direct invocation of subclass constructors with calls directed at the prototype registry's factory method.
 
 ## Example

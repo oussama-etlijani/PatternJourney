@@ -17,7 +17,7 @@ The Factory Method pattern recommends that you replace direct object constructio
 
 At first glance, this modification may appear redundant: we've simply relocated the constructor call from one section of the program to another. However, bear in mind that now you can override the factory method in a subclass and change the type of products being created by the method.
 
-There's a minor limitation, though: subclasses may return different types of products only if these products share a common base class or interface. Also, the factory method in the base class should declare its return type as this interface. 
+There's a minor limitation, though: subclasses may return different types of products only if these products share a common base class or interface. Also, the factory method in the base class should declare its return type as this interface.
 
 For instance, the PizzaDelivery, SushiDelivery, and BurgerDelivery classes should all implement the FoodDelivery interface, which stipulates a method called deliver. Each class implements this method differently: PizzaDelivery delivers pizza, SushiDelivery delivers sushi, and BurgerDelivery delivers burgers. The factory method in the PizzaRestaurant class returns PizzaDelivery objects, whereas the factory method in the SushiRestaurant class returns SushiDelivery objects, and so on.
 
