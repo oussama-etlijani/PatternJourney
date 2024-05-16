@@ -28,7 +28,7 @@ def main():
 
     # Assert that both instances are the same
     assert (
-            instance1 is instance2
+        instance1 is instance2
     ), "Error: instance1 and instance2 are not the same instance"
     print("\nAssertion Passed: Both instances are the same.")
 
