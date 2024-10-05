@@ -17,6 +17,7 @@ e.g., when they come into view).
 
 We could use the Proxy pattern to create a virtual proxy for the images. The virtual proxy will act as a placeholder for
 the actual images and will only load them when necessary.
+![Flyweight](../../assets/proxy.png)
 
 ## 🚧 Structural Elements
 
