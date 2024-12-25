@@ -24,13 +24,10 @@ class ProductItem(BaseComponent):
     def display(self) -> None:
         print("Displaying product details.")
 
-    # Other product-related functionality
-
 
 class QuantityInput(BaseComponent):
     def update_quantity(self) -> None:
         print("Updating quantity based on customization.")
-        # Additional logic related to quantity updates
 
 
 class Customization(BaseComponent):
@@ -41,10 +38,10 @@ class Customization(BaseComponent):
 
 class ShoppingCartMediator(Mediator):
     def __init__(
-        self,
-        product_item: ProductItem,
-        quantity_input: QuantityInput,
-        customization: Customization,
+            self,
+            product_item: ProductItem,
+            quantity_input: QuantityInput,
+            customization: Customization,
     ) -> None:
         self._product_item = product_item
         self._product_item.mediator = self
@@ -66,7 +63,9 @@ if __name__ == "__main__":
     product_item = ProductItem()
     quantity_input = QuantityInput()
     customization = Customization()
-    shopping_cart_mediator = ShoppingCartMediator(product_item, quantity_input, customization)
+    shopping_cart_mediator = ShoppingCartMediator(
+        product_item, quantity_input, customization
+    )
 
     print("User adds a product to the cart.")
     product_item.display()
