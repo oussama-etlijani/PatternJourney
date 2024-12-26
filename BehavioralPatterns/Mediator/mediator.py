@@ -38,10 +38,10 @@ class Customization(BaseComponent):
 
 class ShoppingCartMediator(Mediator):
     def __init__(
-            self,
-            product_item: ProductItem,
-            quantity_input: QuantityInput,
-            customization: Customization,
+        self,
+        product_item: ProductItem,
+        quantity_input: QuantityInput,
+        customization: Customization,
     ) -> None:
         self._product_item = product_item
         self._product_item.mediator = self

@@ -21,7 +21,9 @@ class GameCharacter:
     def restore_state(self, memento: CharacterMemento) -> None:
         self._health = memento.get_health()
         self._mana = memento.get_mana()
-        print(f"Character attributes restored - health: {self._health}, mana: {self._mana}")
+        print(
+            f"Character attributes restored - health: {self._health}, mana: {self._mana}"
+        )
 
 
 class CharacterMemento(ABC):
